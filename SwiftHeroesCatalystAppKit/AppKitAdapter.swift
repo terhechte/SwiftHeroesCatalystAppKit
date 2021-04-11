@@ -3,7 +3,7 @@ import Foundation
 
 private let bundleName = "AppKitBundle.bundle"
 
-class AppKitAdapter {
+final class AppKitAdapter {
     
     private static var principalClass: NSObject.Type? = {
         let bundle = Bundle.main
@@ -31,6 +31,15 @@ class AppKitAdapter {
             .takeRetainedValue() as? NSNumber
         else { return }
         print("Number Of Screens", screens.intValue)
+    }
+    
+    func showWindow() {
+        appKitController?.perform(NSSelectorFromString("showCustomWindow"))
+    }
+    
+    func setDelegate(_ delegate: NSObject) {
+        let selector = NSSelectorFromString("setDelegate:")
+        appKitController?.perform(selector, with: delegate)
     }
 }
 #endif

@@ -20,6 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #if targetEnvironment(macCatalyst)
         appKitAdapter.loadBundle()
         appKitAdapter.numberOfScreens()
+        
+        guard let rootController = (window?.rootViewController as? ViewController) else { return }
+        rootController.adapter = appKitAdapter
+        appKitAdapter.setDelegate(rootController)
         #endif
     }
 
