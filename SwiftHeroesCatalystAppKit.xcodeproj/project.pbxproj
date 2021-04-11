@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,34 @@
 		4DE3145E262334B000921A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE3145C262334B000921A8B /* Main.storyboard */; };
 		4DE31460262334B100921A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE3145F262334B100921A8B /* Assets.xcassets */; };
 		4DE31463262334B100921A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE31461262334B100921A8B /* LaunchScreen.storyboard */; };
+		4DE3147C2623358B00921A8B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3147B2623358B00921A8B /* MainController.swift */; };
+		4DE31480262337EE00921A8B /* AppKitAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3147F262337EE00921A8B /* AppKitAdapter.swift */; };
+		4DE3148926233D5E00921A8B /* AppKitBundle.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 4DE314722623353400921A8B /* AppKitBundle.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DE3148A26233D5E00921A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DE3144B262334B000921A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DE314712623353400921A8B;
+			remoteInfo = AppKitBundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4DE3148C26233D5E00921A8B /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4DE3148926233D5E00921A8B /* AppKitBundle.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4DE31453262334B000921A8B /* SwiftHeroesCatalystAppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftHeroesCatalystAppKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +51,23 @@
 		4DE3145F262334B100921A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DE31462262334B100921A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DE31464262334B100921A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE3146B262334B800921A8B /* SwiftHeroesCatalystAppKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftHeroesCatalystAppKit.entitlements; sourceTree = "<group>"; };
+		4DE314722623353400921A8B /* AppKitBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppKitBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE314742623353400921A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE3147A2623358B00921A8B /* AppKitBundle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppKitBundle-Bridging-Header.h"; sourceTree = "<group>"; };
+		4DE3147B2623358B00921A8B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		4DE3147F262337EE00921A8B /* AppKitAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKitAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4DE31450262334B000921A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DE3146F2623353400921A8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				4DE31455262334B000921A8B /* SwiftHeroesCatalystAppKit */,
+				4DE314732623353400921A8B /* AppKitBundle */,
 				4DE31454262334B000921A8B /* Products */,
+				4DE3148826233D5E00921A8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE31453262334B000921A8B /* SwiftHeroesCatalystAppKit.app */,
+				4DE314722623353400921A8B /* AppKitBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +99,7 @@
 		4DE31455262334B000921A8B /* SwiftHeroesCatalystAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				4DE3146B262334B800921A8B /* SwiftHeroesCatalystAppKit.entitlements */,
 				4DE31456262334B000921A8B /* AppDelegate.swift */,
 				4DE31458262334B000921A8B /* SceneDelegate.swift */,
 				4DE3145A262334B000921A8B /* ViewController.swift */,
@@ -63,8 +107,26 @@
 				4DE3145F262334B100921A8B /* Assets.xcassets */,
 				4DE31461262334B100921A8B /* LaunchScreen.storyboard */,
 				4DE31464262334B100921A8B /* Info.plist */,
+				4DE3147F262337EE00921A8B /* AppKitAdapter.swift */,
 			);
 			path = SwiftHeroesCatalystAppKit;
+			sourceTree = "<group>";
+		};
+		4DE314732623353400921A8B /* AppKitBundle */ = {
+			isa = PBXGroup;
+			children = (
+				4DE314742623353400921A8B /* Info.plist */,
+				4DE3147B2623358B00921A8B /* MainController.swift */,
+				4DE3147A2623358B00921A8B /* AppKitBundle-Bridging-Header.h */,
+			);
+			path = AppKitBundle;
+			sourceTree = "<group>";
+		};
+		4DE3148826233D5E00921A8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +139,36 @@
 				4DE3144F262334B000921A8B /* Sources */,
 				4DE31450262334B000921A8B /* Frameworks */,
 				4DE31451262334B000921A8B /* Resources */,
+				4DE3148C26233D5E00921A8B /* Embed PlugIns */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DE3148B26233D5E00921A8B /* PBXTargetDependency */,
+			);
+			name = SwiftHeroesCatalystAppKit;
+			packageProductDependencies = (
+			);
+			productName = SwiftHeroesCatalystAppKit;
+			productReference = 4DE31453262334B000921A8B /* SwiftHeroesCatalystAppKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DE314712623353400921A8B /* AppKitBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DE314752623353400921A8B /* Build configuration list for PBXNativeTarget "AppKitBundle" */;
+			buildPhases = (
+				4DE3146E2623353400921A8B /* Sources */,
+				4DE3146F2623353400921A8B /* Frameworks */,
+				4DE314702623353400921A8B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftHeroesCatalystAppKit;
-			productName = SwiftHeroesCatalystAppKit;
-			productReference = 4DE31453262334B000921A8B /* SwiftHeroesCatalystAppKit.app */;
-			productType = "com.apple.product-type.application";
+			name = AppKitBundle;
+			productName = AppKitBundle;
+			productReference = 4DE314722623353400921A8B /* AppKitBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +182,10 @@
 					4DE31452262334B000921A8B = {
 						CreatedOnToolsVersion = 12.2;
 					};
+					4DE314712623353400921A8B = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
 				};
 			};
 			buildConfigurationList = 4DE3144E262334B000921A8B /* Build configuration list for PBXProject "SwiftHeroesCatalystAppKit" */;
@@ -110,11 +197,15 @@
 				Base,
 			);
 			mainGroup = 4DE3144A262334B000921A8B;
+			packageReferences = (
+				4DE3148326233C6200921A8B /* XCRemoteSwiftPackageReference "Dynamic" */,
+			);
 			productRefGroup = 4DE31454262334B000921A8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4DE31452262334B000921A8B /* SwiftHeroesCatalystAppKit */,
+				4DE314712623353400921A8B /* AppKitBundle */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +221,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DE314702623353400921A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,13 +235,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE31480262337EE00921A8B /* AppKitAdapter.swift in Sources */,
 				4DE3145B262334B000921A8B /* ViewController.swift in Sources */,
 				4DE31457262334B000921A8B /* AppDelegate.swift in Sources */,
 				4DE31459262334B000921A8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DE3146E2623353400921A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE3147C2623358B00921A8B /* MainController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DE3148B26233D5E00921A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = maccatalyst;
+			target = 4DE314712623353400921A8B /* AppKitBundle */;
+			targetProxy = 4DE3148A26233D5E00921A8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4DE3145C262334B000921A8B /* Main.storyboard */ = {
@@ -286,7 +402,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftHeroesCatalystAppKit/SwiftHeroesCatalystAppKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76VT9VZ6GK;
 				INFOPLIST_FILE = SwiftHeroesCatalystAppKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stylemac.SwiftHeroesCatalystAppKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +423,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftHeroesCatalystAppKit/SwiftHeroesCatalystAppKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76VT9VZ6GK;
 				INFOPLIST_FILE = SwiftHeroesCatalystAppKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,8 +433,58 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stylemac.SwiftHeroesCatalystAppKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4DE314762623353400921A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppKitBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stylemac.AppKitBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AppKitBundle/AppKitBundle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4DE314772623353400921A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppKitBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stylemac.AppKitBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AppKitBundle/AppKitBundle-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -338,7 +509,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4DE314752623353400921A8B /* Build configuration list for PBXNativeTarget "AppKitBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DE314762623353400921A8B /* Debug */,
+				4DE314772623353400921A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DE3148326233C6200921A8B /* XCRemoteSwiftPackageReference "Dynamic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mhdhejazi/Dynamic.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 4DE3144B262334B000921A8B /* Project object */;
 }
